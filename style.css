@@ -370,7 +370,151 @@ section {
     margin-top: 40px;
 }
 
-/* ========== 5. ストーリーセクション ========== */
+/* ========== 6. オンラインコース（継続サポートの例） ========== */
+.courses {
+    background-color: #fafafa;
+}
+
+/* ヒーロー画像 */
+.courses-hero-wrapper {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    position: relative;
+}
+
+.courses-hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.courses-hero-placeholder {
+    display: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #f5f5f5;
+    border: 2px dashed #d4869c;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.courses-hero-placeholder span {
+    font-size: 1em;
+    color: #999;
+}
+
+.courses-intro {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+    line-height: 2;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* コースカード */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    box-shadow: 0 8px 24px rgba(212, 134, 156, 0.15);
+    transform: translateY(-6px);
+}
+
+.course-image-wrapper {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-image-placeholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0e4e8 0%, #fff5f8 100%);
+    align-items: center;
+    justify-content: center;
+}
+
+.course-image-placeholder span {
+    font-size: 3em;
+    color: #d4869c;
+    font-weight: 300;
+}
+
+.course-content {
+    padding: 30px 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.course-content h3 {
+    font-size: 1.15em;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    min-height: 3em;
+}
+
+.course-duration {
+    font-size: 0.85em;
+    color: #d4869c;
+    font-weight: 400;
+    margin: 0;
+}
+
+.course-description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.9;
+    margin: 0;
+    flex: 1;
+}
+
+/* コースCTA */
+.courses-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.courses-cta-text {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ========== 7. ストーリーセクション ========== */
 .story {
     background-color: #fafafa;
 }
@@ -575,6 +719,34 @@ section {
 
     .service-card {
         padding: 30px 20px;
+    }
+
+    /* Courses section responsive */
+    .courses-hero-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .courses-intro {
+        font-size: 0.95em;
+        margin-bottom: 40px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .course-image-wrapper {
+        height: 180px;
+    }
+
+    .course-content {
+        padding: 25px 20px;
+    }
+
+    .course-content h3 {
+        font-size: 1.1em;
+        min-height: auto;
     }
 
     .cta-title {
