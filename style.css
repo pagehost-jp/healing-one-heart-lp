@@ -1,0 +1,408 @@
+/* ========== リセット & 基本設定 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+    line-height: 1.8;
+    color: #4a4a4a;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+/* ========== コンテナ ========== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ========== セクション共通 ========== */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+/* ========== 1. ファーストビュー ========== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #fff 0%, #fff5f8 100%);
+    padding: 60px 30px;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: 0.9em;
+    color: #d4869c;
+    letter-spacing: 0.15em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-title {
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 2;
+    font-weight: 300;
+}
+
+/* ========== 2. 共感セクション ========== */
+.empathy {
+    background-color: #ffffff;
+}
+
+.empathy-text {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 2.2;
+}
+
+.empathy-text p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.empathy-closing {
+    color: #d4869c;
+    font-weight: 400;
+    padding-top: 20px;
+    border-top: 1px solid #f0e4e8;
+}
+
+/* ========== 3. サービスの考え方 ========== */
+.philosophy {
+    background-color: #fafafa;
+}
+
+.philosophy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.philosophy-item h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #d4869c;
+    letter-spacing: 0.05em;
+}
+
+.philosophy-item p {
+    color: #666;
+    line-height: 2;
+}
+
+/* ========== 4. 提供内容 ========== */
+.services {
+    background-color: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.service-card {
+    padding: 40px 30px;
+    background-color: #fff;
+    border: 1px solid #f0e4e8;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 24px rgba(212, 134, 156, 0.12);
+    transform: translateY(-4px);
+}
+
+.service-card h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.9;
+    font-size: 0.95em;
+}
+
+.services-note {
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+    line-height: 1.8;
+    margin-top: 40px;
+}
+
+/* ========== 5. ストーリーセクション ========== */
+.story {
+    background-color: #fafafa;
+}
+
+.story-content {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 2.2;
+}
+
+.story-content p {
+    margin-bottom: 40px;
+    font-size: 1.05em;
+    color: #555;
+}
+
+.story-closing {
+    color: #999;
+    font-size: 0.95em;
+    font-style: italic;
+    padding-top: 30px;
+    border-top: 1px solid #e8e8e8;
+}
+
+/* ========== 6. CTA（行動導線） ========== */
+.cta {
+    background: linear-gradient(180deg, #fff5f8 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+
+.cta-description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 18px 50px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #d4869c;
+    color: #ffffff;
+    border-color: #d4869c;
+}
+
+.btn-primary:hover {
+    background-color: #c27589;
+    border-color: #c27589;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 134, 156, 0.3);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #d4869c;
+    border-color: #d4869c;
+}
+
+.btn-secondary:hover {
+    background-color: #fff5f8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 134, 156, 0.15);
+}
+
+.cta-note {
+    color: #999;
+    font-size: 0.85em;
+    margin-top: 20px;
+}
+
+/* ========== 7. フッター ========== */
+.footer {
+    background-color: #fafafa;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.footer-name {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+.footer-tagline {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+
+.footer-copyright {
+    font-size: 0.8em;
+    color: #bbb;
+}
+
+/* ========== レスポンシブ対応 ========== */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 1.8em;
+        line-height: 1.7;
+    }
+
+    .hero-description {
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 1.6em;
+        margin-bottom: 40px;
+    }
+
+    .empathy-text p,
+    .story-content p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .philosophy-content {
+        gap: 40px;
+    }
+
+    .philosophy-item h3 {
+        font-size: 1.15em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .cta-title {
+        font-size: 1.6em;
+    }
+
+    .cta-description {
+        font-size: 1em;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 40px;
+    }
+
+    .footer {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .section-title {
+        font-size: 1.4em;
+    }
+
+    .btn {
+        padding: 14px 30px;
+        font-size: 0.95em;
+    }
+}
+
+/* ========== スムーススクロール ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== アニメーション用（オプション） ========== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
