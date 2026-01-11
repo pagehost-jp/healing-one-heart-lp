@@ -144,29 +144,6 @@ section {
     animation-delay: 0.7s;
 }
 
-/* 極細ライン：視線を止めるため */
-.hero-divider {
-    width: 40px;
-    height: 1px;
-    background-color: #e8caca;
-    margin: 24px auto;
-    opacity: 0;
-    animation: gentleFadeIn 1s ease-out forwards;
-    animation-delay: 1s;
-}
-
-/* 肩書き：小さく・グレー・行間広め */
-.hero-subtitle {
-    font-size: 0.75rem;
-    color: #999;
-    letter-spacing: 0.15em;
-    font-weight: 300;
-    line-height: 1.8;
-    opacity: 0;
-    animation: gentleFadeIn 1s ease-out forwards;
-    animation-delay: 1.2s;
-}
-
 /* 控えめなフェードイン（動きは最小限） */
 @keyframes gentleFadeIn {
     from {
@@ -886,10 +863,6 @@ section {
 
     .hero-copy {
         font-size: 1.6rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.65rem;
     }
 
     .section-title {
