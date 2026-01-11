@@ -176,8 +176,7 @@ section {
 .empathy-closing {
     color: #d4869c;
     font-weight: 400;
-    padding-top: 20px;
-    border-top: 1px solid #f0e4e8;
+    margin-top: 10px;
 }
 
 /* ========== 2. プロフィール抜粋（About preview） ========== */
@@ -734,8 +733,7 @@ section {
     color: #666;
     font-size: 0.95em;
     font-style: italic;
-    padding-top: 30px;
-    border-top: 1px solid #e8e8e8;
+    margin-top: 15px;
 }
 
 /* ========== 6. CTA（行動導線） ========== */
