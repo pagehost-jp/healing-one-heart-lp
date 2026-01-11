@@ -121,9 +121,27 @@ section {
     font-weight: 400;
     color: #333;
     margin: 0 auto;
+}
+
+/* 1行ずつ、自然な間をもって表示 */
+.hero-copy__line {
+    display: block;
     opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
+    transform: translateY(3px);
+    animation: gentleFadeIn 1s ease-out forwards;
+}
+
+/* 各行に時間差を設定（自然な間） */
+.hero-copy__line:nth-child(1) {
     animation-delay: 0.3s;
+}
+
+.hero-copy__line:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.hero-copy__line:nth-child(3) {
+    animation-delay: 0.7s;
 }
 
 /* 極細ライン：視線を止めるため */
@@ -133,8 +151,8 @@ section {
     background-color: #e8caca;
     margin: 24px auto;
     opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: 0.5s;
+    animation: gentleFadeIn 1s ease-out forwards;
+    animation-delay: 1s;
 }
 
 /* 肩書き：小さく・グレー・行間広め */
@@ -145,14 +163,19 @@ section {
     font-weight: 300;
     line-height: 1.8;
     opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: 0.7s;
+    animation: gentleFadeIn 1s ease-out forwards;
+    animation-delay: 1.2s;
 }
 
-/* 時間差フェードインアニメーション */
-@keyframes fadeIn {
+/* 控えめなフェードイン（動きは最小限） */
+@keyframes gentleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(3px);
+    }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
