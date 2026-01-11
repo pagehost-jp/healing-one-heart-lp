@@ -30,12 +30,35 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-logo {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 0.85em;
+    font-weight: 300;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #d4869c;
 }
 
 .logo-image {
@@ -770,6 +793,10 @@ section {
 
     .header-container {
         padding: 0 20px;
+    }
+
+    .header-nav {
+        display: none;
     }
 
     .logo-image {

@@ -10,22 +10,33 @@
 </head>
 <body>
     <!-- ヘッダー -->
+    <!-- 改修：ナビゲーションを追加（自然な日本語で統一） -->
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
                 <img src="assets/img/logo.webp" alt="Healing One Heart Wellness" class="logo-image">
                 <span class="site-name">Healing One Heart</span>
             </div>
+            <nav class="header-nav">
+                <a href="#" class="nav-link">トップ</a>
+                <a href="#about" class="nav-link">はじめまして</a>
+                <a href="#philosophy" class="nav-link">大切にしていること</a>
+                <a href="#services" class="nav-link">サポート内容</a>
+                <a href="#courses" class="nav-link">オンラインプログラム</a>
+                <a href="#cta" class="nav-link">お問い合わせ</a>
+            </nav>
         </div>
     </header>
     <!-- 1. ファーストビュー -->
+    <!-- 改修：「可能性の扉」を1行追加（マリさんの言葉を静かに戻す） -->
     <section class="hero">
         <div class="hero-content">
             <p class="hero-subtitle">ホリスティックヘルスコーチ / 心・体・魂の伴走者</p>
             <h1 class="hero-title">
                 これからの人生を、<br>
-                心と体が安心できる形で<br>
-                整えていきませんか
+                心と体が安心できる形で整えながら、<br>
+                あなた自身の可能性の扉を、<br>
+                そっと開いていきませんか
             </h1>
             <p class="hero-description">
                 直す、治す、変えるのではなく。<br>
@@ -111,7 +122,7 @@
     </section>
 
     <!-- 4. サービスの考え方 -->
-    <section class="philosophy">
+    <section class="philosophy" id="philosophy">
         <div class="container">
             <h2 class="section-title">大切にしていること</h2>
             <div class="philosophy-content">
@@ -141,7 +152,7 @@
     </section>
 
     <!-- 5. 提供内容 -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">提供しているサポート</h2>
             <div class="services-grid">
@@ -190,6 +201,7 @@
     </section>
 
     <!-- 6. オンラインコース（継続サポートの例） -->
+    <!-- 改修：見出しに「可能性への扉」を追加 -->
     <section class="courses" id="courses">
         <div class="container">
             <!-- セクションヒーロー画像 -->
@@ -197,7 +209,7 @@
                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&h=900&fit=crop&q=80" alt="オンラインプログラム" class="courses-hero-image">
             </div>
 
-            <h2 class="section-title">選べる道筋（オンラインプログラム）</h2>
+            <h2 class="section-title">選べる道筋 — 可能性への扉</h2>
             <p class="courses-intro">
                 まずはお話をうかがい、いまの状態に合う形を一緒に選びます。<br>
                 下は継続サポートの一例です。
@@ -258,6 +270,7 @@
     </section>
 
     <!-- 7. ストーリーセクション -->
+    <!-- 改修：締めに「扉を開ける瞬間」の一文を追加 -->
     <section class="story">
         <div class="container">
             <h2 class="section-title">なぜ、この活動をしているのか</h2>
@@ -282,14 +295,18 @@
                 <p class="story-closing">
                     これは美談ではありません。<br>
                     ただ、私が静かに続けている、<br>
-                    もうひとつの約束です。
+                    もうひとつの約束です。<br>
+                    <br>
+                    それでも私は、一人ひとりが<br>
+                    自分自身の人生の扉を開ける瞬間を<br>
+                    信じています。
                 </p>
             </div>
         </div>
     </section>
 
     <!-- 8. CTA（行動導線） -->
-    <section class="cta">
+    <section class="cta" id="cta">
         <div class="container">
             <h2 class="cta-title">まずは、お話を聞かせてください</h2>
             <p class="cta-description">
