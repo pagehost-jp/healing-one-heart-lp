@@ -559,9 +559,9 @@ section {
 
 .testimonial-text {
     font-size: 0.9em;
-    line-height: 1.9;
+    line-height: 2;
     color: var(--color-text-light);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-style: italic;
 }
 
@@ -569,6 +569,7 @@ section {
     font-size: 0.75em;
     color: #aaa;
     letter-spacing: 0.05em;
+    line-height: 1.6;
 }
 
 /* ========== 5. 提供内容 ========== */
