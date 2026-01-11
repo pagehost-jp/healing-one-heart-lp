@@ -342,7 +342,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* 折りたたみ展開：権威と裏付け（信頼） */
+/* 折りたたみ展開：共感 → 納得 → 安心の順 */
 .about-expanded {
     max-width: 600px;
     margin: 40px auto 0;
@@ -354,12 +354,62 @@ section {
     display: none;
 }
 
-/* 資格・証明書 */
+/* 第二層：共感の入口（文章のみ） */
+.about-journey-empathy {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.about-journey-empathy p {
+    font-size: 0.95em;
+    line-height: 2;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.about-journey-question {
+    font-style: italic;
+    color: var(--color-accent);
+    padding-left: 20px;
+    border-left: 2px solid rgba(212, 134, 156, 0.3);
+}
+
+/* 第三層：変化と選択（文章のみ） */
+.about-journey-transformation {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.about-journey-transformation p {
+    font-size: 0.95em;
+    line-height: 2;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.about-journey-transformation p:last-child {
+    margin-bottom: 0;
+}
+
+/* 安心の裏付け：資格・証明書（最後・控えめ） */
 .about-credentials {
+    padding-top: 40px;
+    border-top: 1px solid #f5f5f5;
+    text-align: center;
+}
+
+.credentials-label {
+    font-size: 0.75em;
+    color: #aaa;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.credential-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin-bottom: 40px;
 }
 
 .credential-item {
@@ -370,46 +420,25 @@ section {
 }
 
 .credential-badge {
-    width: 80px;
+    width: 70px;
     height: auto;
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
 .credential-certificate {
     width: 100%;
-    max-width: 220px;
+    max-width: 200px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.credential-certificate:hover {
-    transform: scale(1.05);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    opacity: 0.85;
 }
 
 .credential-caption {
-    font-size: 0.7em;
-    color: #aaa;
+    font-size: 0.65em;
+    color: #bbb;
     text-align: center;
     line-height: 1.4;
-}
-
-/* 経歴・想い */
-.about-story {
-    text-align: left;
-}
-
-.about-story p {
-    font-size: 0.95em;
-    line-height: 1.9;
-    color: var(--color-text-light);
-    margin-bottom: 20px;
-}
-
-.about-story p:last-child {
-    margin-bottom: 0;
 }
 
 /* ========== 3. 共感セクション ========== */
@@ -961,21 +990,31 @@ section {
         font-size: 0.9em;
     }
 
-    .about-credentials {
+    .about-journey-empathy,
+    .about-journey-transformation {
+        margin-bottom: 40px;
+    }
+
+    .about-journey-empathy p,
+    .about-journey-transformation p {
+        font-size: 0.9em;
+    }
+
+    .credential-items {
         grid-template-columns: 1fr;
         gap: 24px;
     }
 
     .credential-badge {
-        width: 70px;
+        width: 60px;
     }
 
     .credential-certificate {
-        max-width: 200px;
+        max-width: 180px;
     }
 
-    .about-story p {
-        font-size: 0.9em;
+    .credentials-label {
+        font-size: 0.7em;
     }
 
     .philosophy-content {
