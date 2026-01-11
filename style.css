@@ -95,8 +95,8 @@ h1, h2, h3 {
 }
 
 .logo-image {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -197,10 +197,33 @@ section {
     background-color: #ffffff;
 }
 
+.empathy-intro {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    font-size: 0.8em;
+    color: #888;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.6;
+}
+
 .empathy-text {
     max-width: 700px;
     margin: 0 auto;
     line-height: 2.2;
+}
+
+/* スクロールトリガー：1行ずつのフェードイン */
+.empathy-line {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.empathy-line.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .empathy-text p {
@@ -398,12 +421,13 @@ section {
     text-align: center;
 }
 
-.credentials-label {
-    font-size: 0.75em;
-    color: #aaa;
-    letter-spacing: 0.1em;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.credentials-title {
+    font-size: 1em;
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
 }
 
 .credential-items {
@@ -419,26 +443,34 @@ section {
     gap: 10px;
 }
 
-.credential-badge {
-    width: 70px;
-    height: auto;
-    opacity: 0.75;
+.credential-label {
+    font-size: 0.75em;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
 }
 
-.credential-certificate {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+.credential-text {
+    font-size: 0.85em;
+    color: #777;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.credential-badge {
+    height: 140px;
+    width: auto;
     opacity: 0.85;
 }
 
-.credential-caption {
-    font-size: 0.65em;
-    color: #bbb;
-    text-align: center;
-    line-height: 1.4;
+.credential-certificate {
+    height: 140px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    opacity: 0.85;
 }
 
 /* ========== 3. 共感セクション ========== */
@@ -557,12 +589,21 @@ section {
     flex: 1;
 }
 
+.testimonial-title {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    font-family: var(--font-serif);
+}
+
 .testimonial-text {
     font-size: 0.9em;
-    line-height: 2;
+    line-height: 1.9;
     color: var(--color-text-light);
-    margin-bottom: 20px;
-    font-style: italic;
+    margin-bottom: 15px;
+    font-style: normal;
 }
 
 .testimonial-author {

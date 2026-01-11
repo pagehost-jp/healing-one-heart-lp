@@ -79,4 +79,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 共感セクション：1行ずつスクロールトリガー
+    const empathyLines = document.querySelectorAll('.empathy-line');
+
+    const empathyObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+
+    const empathyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+                // 各行のインデックスを取得
+                const index = Array.from(empathyLines).indexOf(entry.target);
+                // 0.15s ずつ delay を付けて表示
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 150);
+                // 一度表示したら監視を解除
+                empathyObserver.unobserve(entry.target);
+            }
+        });
+    }, empathyObserverOptions);
+
+    // 各行を監視
+    empathyLines.forEach(line => {
+        empathyObserver.observe(line);
+    });
 });
