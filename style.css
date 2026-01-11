@@ -418,8 +418,33 @@ section {
 /* ========== 3. 共感セクション ========== */
 
 /* ========== 4. サービスの考え方 ========== */
+/* 文字が主役、画像は空気を動かすため */
 .philosophy {
+    position: relative;
     background-color: #fafafa;
+    background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* 白オーバーレイで画像を透明度3-6%相当に */
+.philosophy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(250, 250, 250, 0.96);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.philosophy .container {
+    position: relative;
+    z-index: 1;
 }
 
 .philosophy-content {
@@ -932,6 +957,15 @@ section {
 
     .philosophy-item h3 {
         font-size: 1.15em;
+    }
+
+    /* Philosophy section responsive */
+    .philosophy {
+        background-position: center 40%;
+    }
+
+    .philosophy::before {
+        background-color: rgba(250, 250, 250, 0.97);
     }
 
     .services-grid {
