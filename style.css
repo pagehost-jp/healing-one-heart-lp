@@ -660,24 +660,53 @@ section {
 }
 
 /* ========== 7. ストーリーセクション ========== */
+/* 文字が主役、写真は「余白と呼吸」をつくる背景 */
 .story {
-    background-color: #fafafa;
+    position: relative;
+    background-color: #ffffff;
+    background-image: url('assets/img/mari-miyako.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+
+/* 白オーバーレイで写真を透明度5-10%相当に薄くする */
+.story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.93);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.story .container {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .story-content {
     max-width: 700px;
     margin: 0 auto;
-    line-height: 2.2;
+    line-height: 1.8;
 }
 
 .story-content p {
     margin-bottom: 40px;
     font-size: 1.05em;
-    color: #555;
+    color: #333;
+    line-height: 1.8;
 }
 
 .story-closing {
-    color: #999;
+    color: #666;
     font-size: 0.95em;
     font-style: italic;
     padding-top: 30px;
@@ -843,6 +872,16 @@ section {
     .section-title {
         font-size: 1.6em;
         margin-bottom: 40px;
+    }
+
+    /* Story section responsive */
+    .story {
+        padding: 56px 0;
+        background-position: center 40%;
+    }
+
+    .story::before {
+        background-color: rgba(255, 255, 255, 0.95);
     }
 
     .empathy-text p,
