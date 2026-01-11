@@ -97,12 +97,13 @@ section {
 }
 
 /* ========== 1. ファーストビュー ========== */
+/* プロ仕様：動かさない。でも"空気をつくる" */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #fff 0%, #fff5f8 100%);
+    background-color: #fffafa;
     padding: 120px 30px 60px;
 }
 
@@ -111,28 +112,48 @@ section {
     max-width: 800px;
 }
 
-.hero-subtitle {
-    font-size: 0.9em;
-    color: #d4869c;
-    letter-spacing: 0.15em;
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-
-.hero-title {
-    font-size: 2.5em;
-    font-weight: 300;
-    line-height: 1.6;
+/* メインコピー：Noto Serif JP + 黄金比の行間 */
+.hero-copy {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.2rem;
+    line-height: 1.45;
+    letter-spacing: 0.02em;
+    font-weight: 400;
     color: #333;
-    margin-bottom: 40px;
-    letter-spacing: 0.05em;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
-.hero-description {
-    font-size: 1.1em;
-    color: #666;
-    line-height: 2;
+/* 極細ライン：視線を止めるため */
+.hero-divider {
+    width: 40px;
+    height: 1px;
+    background-color: #e8caca;
+    margin: 24px auto;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* 肩書き：小さく・グレー・行間広め */
+.hero-subtitle {
+    font-size: 0.75rem;
+    color: #999;
+    letter-spacing: 0.15em;
     font-weight: 300;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+/* 時間差フェードインアニメーション */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* ========== 2. 共感セクション ========== */
@@ -813,13 +834,12 @@ section {
         padding: 100px 20px 40px;
     }
 
-    .hero-title {
-        font-size: 1.8em;
-        line-height: 1.7;
+    .hero-copy {
+        font-size: 1.6rem;
     }
 
-    .hero-description {
-        font-size: 1em;
+    .hero-subtitle {
+        font-size: 0.65rem;
     }
 
     .section-title {
