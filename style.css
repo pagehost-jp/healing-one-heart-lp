@@ -95,8 +95,8 @@ h1, h2, h3 {
 }
 
 .logo-image {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -106,6 +106,7 @@ h1, h2, h3 {
     font-weight: 300;
     color: #333;
     letter-spacing: 0.05em;
+    line-height: 1.4;
 }
 
 /* ========== コンテナ ========== */
@@ -830,8 +831,8 @@ section {
 }
 
 .footer-logo-image {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     opacity: 0.85;
@@ -881,12 +882,13 @@ section {
     }
 
     .logo-image {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
     }
 
     .site-name {
-        font-size: 0.85em;
+        font-size: 0.8em;
+        line-height: 1.3;
     }
 
     .hero {
