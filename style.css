@@ -685,10 +685,11 @@ section {
 
 /* ========== 7. ストーリーセクション ========== */
 /* 文字が主役、写真は「余白と呼吸」をつくる背景 */
+/* 抽象・自然系：海・空・水平線 - 語らない強さ */
 .story {
     position: relative;
     background-color: #ffffff;
-    background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1600&q=80');
+    background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1600&q=80&blur=20');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
