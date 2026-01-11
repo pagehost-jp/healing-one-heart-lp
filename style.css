@@ -506,7 +506,72 @@ section {
     line-height: 2;
 }
 
-/* ========== 4. 提供内容 ========== */
+/* ========== 4.5. ご一緒した方の声（Testimonials） ========== */
+/* 控えめで自然な見せ方 */
+.testimonials {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-section) 0;
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--color-text-light);
+    margin-bottom: 60px;
+    font-weight: 300;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+/* 円形アバター（仮画像） */
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    opacity: 0.9;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-text {
+    font-size: 0.9em;
+    line-height: 1.9;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 0.75em;
+    color: #aaa;
+    letter-spacing: 0.05em;
+}
+
+/* ========== 5. 提供内容 ========== */
 .services {
     background-color: #ffffff;
 }
@@ -1032,6 +1097,26 @@ section {
 
     .philosophy::before {
         background-color: rgba(250, 250, 250, 0.97);
+    }
+
+    /* Testimonials section responsive */
+    .testimonials-subtitle {
+        font-size: 0.8em;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .testimonial-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .testimonial-text {
+        font-size: 0.85em;
     }
 
     .services-grid {
