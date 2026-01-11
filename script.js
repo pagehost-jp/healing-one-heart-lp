@@ -49,4 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // プロフィール展開機能
+    const aboutToggle = document.getElementById('about-toggle');
+    const aboutExpanded = document.getElementById('about-expanded');
+
+    if (aboutToggle && aboutExpanded) {
+        aboutToggle.addEventListener('click', () => {
+            const isExpanded = aboutToggle.getAttribute('aria-expanded') === 'true';
+
+            if (isExpanded) {
+                // 閉じる
+                aboutToggle.setAttribute('aria-expanded', 'false');
+                aboutExpanded.hidden = true;
+                aboutToggle.innerHTML = 'プロフィールをもう少し読む <span class="arrow">↓</span>';
+            } else {
+                // 開く
+                aboutToggle.setAttribute('aria-expanded', 'true');
+                aboutExpanded.hidden = false;
+                aboutToggle.innerHTML = '閉じる <span class="arrow">↑</span>';
+
+                // スムーズにスクロール（展開したコンテンツの先頭へ）
+                setTimeout(() => {
+                    aboutExpanded.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }, 100);
+            }
+        });
+    }
 });

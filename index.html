@@ -8,7 +8,7 @@
     <link rel="icon" type="image/webp" href="assets/img/logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -48,46 +48,61 @@
             <h2 class="section-title">はじめまして</h2>
             <p class="about-subtitle">ホリスティックヘルスコーチ / 心・体・魂の伴走者</p>
 
-            <div class="about-content">
-                <!-- 左カラム：写真＋信頼要素 -->
-                <div class="about-left">
-                    <div class="profile-media">
-                        <div class="avatar">
-                            <img src="assets/img/profile.png" alt="Mari Fugate portrait">
-                        </div>
-                    </div>
-                    <p class="profile-location">東京生まれ / アメリカ在住</p>
-
-                    <div class="credentials">
-                        <div class="badge-wrapper">
-                            <img src="assets/img/badge-iin.png" alt="IIN認定ヘルスコーチ" class="badge-image">
-                            <p class="credential-caption">IIN認定ヘルスコーチ</p>
-                        </div>
+            <!-- 常時表示：プロフィール入口 -->
+            <div class="about-main">
+                <div class="about-avatar">
+                    <div class="avatar">
+                        <img src="assets/img/profile.png" alt="Mari Fugate portrait">
                     </div>
                 </div>
 
-                <!-- 右カラム：テキスト -->
-                <div class="about-right">
-                    <div class="about-intro">
-                        <p>
-                            東京生まれ。アメリカ在住。心・体・魂の統合をテーマに、<br>
-                            ホリスティックな視点で"整う"を一緒につくっていきます。
-                        </p>
-                    </div>
-
-                    <ul class="about-details">
-                        <li><strong>現在：</strong>米国在住</li>
-                        <li><strong>学び：</strong>IIN（Institute for Integrative Nutrition）卒</li>
-                        <li><strong>提供：</strong>ヘルスコーチング / 潜在意識コーチング</li>
-                    </ul>
-
-                    <p class="about-message">
-                        焦らせず、否定せず、あなたのペースを大切にします。
+                <div class="about-intro">
+                    <p>
+                        東京生まれ。アメリカ在住。心・体・魂の統合をテーマに、<br>
+                        ホリスティックな視点で"整う"を一緒につくっていきます。
                     </p>
+                </div>
 
-                    <div class="about-cta">
-                        <a href="#story" class="btn-outline">プロフィールをもう少し読む</a>
+                <ul class="about-details">
+                    <li><strong>現在：</strong>米国在住</li>
+                    <li><strong>学び：</strong>IIN（Institute for Integrative Nutrition）卒</li>
+                    <li><strong>提供：</strong>ヘルスコーチング / 潜在意識コーチング</li>
+                </ul>
+
+                <!-- 姿勢の一言（小さなカード） -->
+                <div class="about-stance">
+                    <p>焦らせず、否定せず、あなたのペースを大切にします。</p>
+                </div>
+
+                <!-- 続きを読むボタン -->
+                <div class="about-cta">
+                    <button class="btn-outline" id="about-toggle" aria-expanded="false">
+                        プロフィールをもう少し読む <span class="arrow">↓</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 折りたたみ展開：権威と裏付け -->
+            <div class="about-expanded" id="about-expanded" hidden>
+                <div class="about-credentials">
+                    <div class="credential-item">
+                        <img src="assets/img/badge-iin.png" alt="IIN認定ヘルスコーチ" class="credential-badge">
+                        <p class="credential-caption">IIN認定ヘルスコーチ</p>
                     </div>
+                    <div class="credential-item">
+                        <img src="assets/img/certificate.png" alt="IIN修了証" class="credential-certificate">
+                        <p class="credential-caption">Institute for Integrative Nutrition 修了</p>
+                    </div>
+                </div>
+                <div class="about-story">
+                    <p>
+                        米国最大級の栄養学校IIN（Institute for Integrative Nutrition）でホリスティックな健康の考え方を学び、
+                        心と体、そして魂がつながっていることの大切さを実感しました。
+                    </p>
+                    <p>
+                        食事や運動だけでなく、人間関係、仕事、生き方すべてが健康に影響します。
+                        一人ひとりの「今」に寄り添い、無理なく続けられる形で整えていくことを大切にしています。
+                    </p>
                 </div>
             </div>
         </div>
@@ -125,6 +140,7 @@
             <h2 class="section-title">大切にしていること</h2>
             <div class="philosophy-content">
                 <div class="philosophy-item">
+                    <span class="philosophy-icon">♡</span>
                     <h3>直す、治す、変える、ではない</h3>
                     <p>
                         何かが「間違っている」から変えるのではありません。<br>
@@ -132,6 +148,7 @@
                     </p>
                 </div>
                 <div class="philosophy-item">
+                    <span class="philosophy-icon">✿</span>
                     <h3>思い出す、整う、戻る</h3>
                     <p>
                         本来のあなたが持っていた、心と体の健やかさ。<br>
@@ -139,6 +156,7 @@
                     </p>
                 </div>
                 <div class="philosophy-item">
+                    <span class="philosophy-icon">◎</span>
                     <h3>伴走スタイル</h3>
                     <p>
                         答えを押し付けることはしません。<br>
