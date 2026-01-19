@@ -49,8 +49,6 @@
     <section class="hero">
         <!-- 背景画像（アニメーション付き） -->
         <div class="hero-background"></div>
-        <!-- オーバーレイ（テキストを読みやすくする） -->
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="hero-copy">
                 <span class="hero-copy__line">これからの人生を、</span>
@@ -63,8 +61,8 @@
     <!-- 2. プロフィール抜粋（About preview） -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">はじめまして</h2>
-            <p class="about-name">ふがて まり</p>
+            <p class="about-label">ABOUT ME</p>
+            <h2 class="about-name">ふがて まり</h2>
             <p class="about-subtitle">ホリスティックヘルスコーチ / 心・体・魂の伴走者</p>
 
             <!-- 常時表示：プロフィール入口 -->
@@ -167,7 +165,6 @@
     <!-- 3. 共感セクション -->
     <section class="empathy">
         <div class="container">
-            <p class="empathy-intro empathy-line">これまで、ずっと頑張ってきた人へ。</p>
             <div class="empathy-text">
                 <p>
                     <span class="empathy-line">これまで、ずっと頑張ってきた。</span><br>
@@ -196,24 +193,35 @@
         <div class="container">
             <h2 class="section-title">大切にしていること</h2>
             <div class="philosophy-content">
-                <div class="philosophy-item">
-                    <span class="philosophy-icon">♡</span>
+                <div class="philosophy-item fade-in-item">
+                    <svg class="philosophy-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2C12 2 7 6 7 12C7 15.866 9.134 19 13 19C16.866 19 19 15.866 19 12C19 6 14 2 14 2" stroke-linecap="round"/>
+                        <path d="M9 15C9 15 10 16 12 16C14 16 15 15 15 15" stroke-linecap="round"/>
+                    </svg>
                     <h3>直す、治す、変える、ではない</h3>
                     <p>
                         何かが「間違っている」から変えるのではありません。<br>
                         あなたはすでに十分に頑張ってきました。
                     </p>
                 </div>
-                <div class="philosophy-item">
-                    <span class="philosophy-icon">✿</span>
+                <div class="philosophy-item fade-in-item">
+                    <svg class="philosophy-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="6" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="2" stroke-linecap="round"/>
+                    </svg>
                     <h3>思い出す、整う、戻る</h3>
                     <p>
                         本来のあなたが持っていた、心と体の健やかさ。<br>
                         それを思い出し、整えていくこと。
                     </p>
                 </div>
-                <div class="philosophy-item">
-                    <span class="philosophy-icon">∞</span>
+                <div class="philosophy-item fade-in-item">
+                    <svg class="philosophy-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10" stroke-linecap="round"/>
+                        <path d="M12 6L12 12L16 16" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 2L12 6M12 18L12 22M2 12L6 12M18 12L22 12" stroke-linecap="round"/>
+                    </svg>
                     <h3>伴走スタイル</h3>
                     <p>
                         答えを押し付けることはしません。<br>

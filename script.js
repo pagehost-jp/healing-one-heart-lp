@@ -108,4 +108,28 @@ document.addEventListener('DOMContentLoaded', () => {
     empathyLines.forEach(line => {
         empathyObserver.observe(line);
     });
+
+    // 大切にしていること：3つの島を時間差で表示
+    const philosophyItems = document.querySelectorAll('.philosophy-item');
+
+    const philosophyObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+
+    const philosophyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+                entry.target.classList.add('visible');
+                // 一度表示したら監視を解除
+                philosophyObserver.unobserve(entry.target);
+            }
+        });
+    }, philosophyObserverOptions);
+
+    // 各要素を監視
+    philosophyItems.forEach(item => {
+        philosophyObserver.observe(item);
+    });
 });
