@@ -8,6 +8,7 @@
     --color-text: #333333;
     --color-text-light: #666666;
     --color-accent: #d4869c;
+    --color-accent-gold: #c9a961;
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #fffafa;
     --color-bg-light: #fafafa;
@@ -72,12 +73,19 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.header-logo:hover {
+    opacity: 0.8;
 }
 
 .header-nav {
     display: flex;
     gap: 30px;
     align-items: center;
+    margin-left: 60px;
 }
 
 .nav-link {
@@ -95,18 +103,20 @@ h1, h2, h3 {
 }
 
 .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .site-name {
-    font-size: 0.95em;
-    font-weight: 300;
+    font-size: 1.15em;
+    font-weight: 400;
     color: #333;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     line-height: 1.4;
+    white-space: nowrap;
+    font-family: var(--font-serif);
 }
 
 /* ヘッダーアクション（LINE + SNS） */
@@ -168,7 +178,7 @@ h1, h2, h3 {
 
 /* ========== コンテナ ========== */
 .container {
-    max-width: var(--content-width);
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -187,6 +197,20 @@ section {
     color: var(--color-text);
     line-height: var(--line-height-heading);
     letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent-gold) 0%, var(--color-accent) 100%);
+    border-radius: 2px;
 }
 
 /* ========== 1. ファーストビュー ========== */
@@ -198,11 +222,54 @@ section {
     justify-content: center;
     background-color: #fffafa;
     padding: 120px 30px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景画像（アニメーション付き） */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80');
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+/* ゆっくりとしたズームアニメーション */
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* オーバーレイ（テキストを読みやすく） */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 250, 250, 0.7) 0%,
+        rgba(255, 250, 250, 0.85) 100%
+    );
+    z-index: 1;
 }
 
 .hero-content {
     text-align: center;
     max-width: 800px;
+    position: relative;
+    z-index: 2;
 }
 
 /* メインコピー：Noto Serif JP + 黄金比の行間 */
@@ -302,6 +369,20 @@ section {
     padding: var(--spacing-section) 0;
 }
 
+.about .container {
+    max-width: var(--content-width);
+}
+
+.about-name {
+    text-align: center;
+    font-size: 1.8em;
+    font-family: var(--font-serif);
+    color: #333;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
 .about-subtitle {
     text-align: center;
     font-size: 0.9em;
@@ -378,10 +459,11 @@ section {
 
 /* 姿勢の一言（小さなカード） */
 .about-stance {
-    background-color: rgba(250, 245, 248, 0.6);
+    background: linear-gradient(135deg, rgba(250, 245, 248, 0.6) 0%, rgba(253, 250, 245, 0.6) 100%);
     border-radius: 12px;
     padding: 20px 30px;
     margin: 30px 0;
+    border-left: 3px solid var(--color-accent-gold);
 }
 
 .about-stance p {
@@ -542,10 +624,11 @@ section {
 
 .credential-label {
     font-size: 0.75em;
-    color: #999;
+    color: var(--color-accent-gold);
     margin-top: 10px;
     margin-bottom: 5px;
     letter-spacing: 0.05em;
+    font-weight: 400;
 }
 
 .credential-text {
@@ -617,9 +700,9 @@ section {
 .philosophy-icon {
     display: block;
     font-size: 2.5em;
-    color: var(--color-accent);
+    color: var(--color-accent-gold);
     margin-bottom: 20px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .philosophy-item h3 {
@@ -652,9 +735,9 @@ section {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -720,6 +803,9 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-card {
@@ -767,6 +853,13 @@ section {
     letter-spacing: 0.05em;
 }
 
+.service-duration {
+    font-size: 0.85em;
+    color: #d4869c;
+    font-weight: 400;
+    margin-bottom: 10px !important;
+}
+
 .service-content p {
     color: #666;
     line-height: 1.9;
@@ -780,6 +873,36 @@ section {
     font-size: 0.9em;
     line-height: 1.8;
     margin-top: 40px;
+}
+
+/* ========== 5.5. ブリッジセクション（核心メッセージ） ========== */
+.bridge {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.bridge-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bridge-quote {
+    font-family: var(--font-serif);
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #d4869c;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.bridge-text {
+    font-size: 1em;
+    line-height: 2.1;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* ========== 6. オンラインコース（継続サポートの例） ========== */
@@ -836,6 +959,9 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .course-card {
@@ -846,11 +972,18 @@ section {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .course-card:hover {
     box-shadow: 0 8px 24px rgba(212, 134, 156, 0.15);
     transform: translateY(-6px);
+}
+
+.course-card:hover h3 {
+    color: var(--color-accent);
 }
 
 .course-image-wrapper {
@@ -896,14 +1029,45 @@ section {
     color: #333;
     line-height: 1.5;
     letter-spacing: 0.05em;
-    min-height: 3em;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.course-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.course-tag {
+    display: inline-block;
+    font-size: 0.75em;
+    color: #999;
+    padding: 4px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    background-color: transparent;
 }
 
 .course-duration {
     font-size: 0.85em;
-    color: #d4869c;
+    color: var(--color-accent-gold);
     font-weight: 400;
     margin: 0;
+}
+
+.course-tagline {
+    font-size: 0.9em;
+    color: #333;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: rgba(212, 134, 156, 0.05);
+    border-left: 3px solid #d4869c;
+    border-radius: 4px;
 }
 
 .course-description {
@@ -955,14 +1119,33 @@ section {
 .story .container {
     position: relative;
     z-index: 1;
-    max-width: 920px;
+    max-width: var(--content-width);
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* 画像とテキストを横並びに（画像は右側） */
+.story-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image {
+    flex-shrink: 0;
+    width: 350px;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
 .story-content {
-    max-width: 700px;
-    margin: 0 auto;
+    flex: 1;
     line-height: 1.8;
 }
 
@@ -1006,11 +1189,14 @@ section {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: 18px 50px;
     text-decoration: none;
     border-radius: 50px;
@@ -1027,11 +1213,23 @@ section {
     border-color: #d4869c;
 }
 
+.btn-line {
+    padding: 20px 60px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 15px rgba(212, 134, 156, 0.2);
+}
+
+.btn-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
 .btn-primary:hover {
     background-color: #c27589;
     border-color: #c27589;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(212, 134, 156, 0.3);
+    box-shadow: 0 8px 20px rgba(212, 134, 156, 0.35);
 }
 
 .btn-secondary {
@@ -1044,6 +1242,24 @@ section {
     background-color: #fff5f8;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(212, 134, 156, 0.15);
+}
+
+.cta-alternative {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.cta-email-link {
+    color: #999;
+    text-decoration: underline;
+    text-decoration-color: rgba(153, 153, 153, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-email-link:hover {
+    color: #666;
+    text-decoration-color: rgba(102, 102, 102, 0.5);
 }
 
 .cta-note {
@@ -1064,19 +1280,20 @@ section {
 }
 
 .footer-logo-image {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     opacity: 0.85;
 }
 
 .footer-name {
-    font-size: 1.3em;
-    font-weight: 300;
+    font-size: 1.5em;
+    font-weight: 400;
     color: #333;
     margin-bottom: 10px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
+    font-family: var(--font-serif);
 }
 
 .footer-tagline {
@@ -1087,55 +1304,30 @@ section {
     font-weight: 300;
 }
 
-.footer-connect {
+.footer-social {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 16px;
-    margin: 30px 0;
+    margin: 24px 0;
 }
 
-.footer-line-btn {
-    background-color: var(--color-accent);
-    color: #fff;
-    padding: 14px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 0.95em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-line-btn:hover {
-    background-color: #c17586;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 134, 156, 0.3);
-}
-
-.footer-instagram-link {
+.footer-social-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: #999;
-    text-decoration: none;
-    font-size: 0.85em;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-    min-height: 44px;
-    min-width: 44px;
     justify-content: center;
+    color: #ccc;
+    transition: color 0.3s ease;
+    padding: 8px;
 }
 
-.footer-instagram-link:hover {
-    color: #666;
+.footer-social-link:hover {
+    color: #999;
 }
 
-.footer-instagram-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
+.footer-social-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .footer-copyright {
@@ -1175,13 +1367,23 @@ section {
     }
 
     .site-name {
-        font-size: 0.8em;
+        font-size: 0.9em;
         line-height: 1.3;
     }
 
     .hero {
         min-height: 80vh;
         padding: 100px 20px 40px;
+    }
+
+    /* モバイルではアニメーションを軽量化 */
+    .hero-background {
+        animation: none;
+        background-position: center 30%;
+    }
+
+    .hero-overlay {
+        background: rgba(255, 250, 250, 0.9);
     }
 
     .hero-copy {
@@ -1203,6 +1405,16 @@ section {
         background-color: rgba(255, 255, 255, 0.95);
     }
 
+    .story-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .story-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
     .empathy-text p,
     .story-content p {
         font-size: 1em;
@@ -1212,6 +1424,11 @@ section {
     /* About section responsive */
     .about {
         padding: var(--spacing-section-mobile) 0;
+    }
+
+    .about-name {
+        font-size: 1.4em;
+        letter-spacing: 0.1em;
     }
 
     .about-subtitle {
@@ -1279,11 +1496,14 @@ section {
     }
 
     .credential-badge {
-        width: 60px;
+        width: auto;
+        height: 80px;
     }
 
     .credential-certificate {
-        max-width: 180px;
+        width: auto;
+        height: 80px;
+        max-width: 100%;
     }
 
     .credentials-label {
@@ -1387,27 +1607,17 @@ section {
         padding: 16px 40px;
     }
 
+    .btn-line {
+        padding: 18px 40px;
+        font-size: 1em;
+    }
+
+    .cta-alternative {
+        font-size: 0.85em;
+    }
+
     .footer {
         padding: 40px 20px;
-    }
-
-    .footer-connect {
-        gap: 12px;
-        margin: 24px 0;
-    }
-
-    .footer-line-btn {
-        padding: 12px 28px;
-        font-size: 0.9em;
-    }
-
-    .footer-instagram-link {
-        font-size: 0.8em;
-    }
-
-    .footer-instagram-icon {
-        width: 16px;
-        height: 16px;
     }
 }
 

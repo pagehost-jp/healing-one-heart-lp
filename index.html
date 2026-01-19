@@ -16,12 +16,11 @@
     <!-- 改修：ナビゲーションを追加（自然な日本語で統一） -->
     <header class="header">
         <div class="header-container">
-            <div class="header-logo">
+            <a href="#" class="header-logo">
                 <img src="assets/img/logo.webp" alt="Healing One Heart Wellness" class="logo-image">
                 <span class="site-name">Healing One Heart Wellness</span>
-            </div>
+            </a>
             <nav class="header-nav">
-                <a href="#" class="nav-link">トップ</a>
                 <a href="#about" class="nav-link">はじめまして</a>
                 <a href="#philosophy" class="nav-link">大切にしていること</a>
                 <a href="#services" class="nav-link">サポート内容</a>
@@ -48,6 +47,10 @@
     <!-- 1. ファーストビュー -->
     <!-- プロ仕様：感情をひらく、呼吸をゆるめる -->
     <section class="hero">
+        <!-- 背景画像（アニメーション付き） -->
+        <div class="hero-background"></div>
+        <!-- オーバーレイ（テキストを読みやすくする） -->
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="hero-copy">
                 <span class="hero-copy__line">これからの人生を、</span>
@@ -61,13 +64,14 @@
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">はじめまして</h2>
+            <p class="about-name">ふがて まり</p>
             <p class="about-subtitle">ホリスティックヘルスコーチ / 心・体・魂の伴走者</p>
 
             <!-- 常時表示：プロフィール入口 -->
             <div class="about-main">
                 <div class="about-avatar">
                     <div class="avatar">
-                        <img src="assets/img/profile.png" alt="Mari Fugate portrait">
+                        <img src="assets/img/profile-new.jpg" alt="ふがて まり">
                     </div>
                 </div>
 
@@ -259,27 +263,10 @@
                         <p class="testimonial-text">
                             仕事でも、私生活でも、人生の向き合い方そのものが変わったと感じています。
                         </p>
-                        <p class="testimonial-author">佐伯 小葉<br>パーソナルトレーナー</p>
+                        <p class="testimonial-author">小葉 佐伯<br>パーソナルトレーナー</p>
                     </div>
                 </div>
 
-                <!-- Testimonial 3: 大きなきっかけ -->
-                <div class="testimonial-card">
-                    <div class="testimonial-avatar">
-                        <!-- 仮画像：後で差し替え -->
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&q=80" alt="お客様の写真（後で差し替え）" class="avatar-image">
-                    </div>
-                    <div class="testimonial-content">
-                        <h3 class="testimonial-title">大きなきっかけ</h3>
-                        <p class="testimonial-text">
-                            マリさんのセッションは、私のキャリアにとってひとつの大きな転機となりました。
-                        </p>
-                        <p class="testimonial-text">
-                            セッションを受ける前は到底できないと思っていた目標にも、現実的に向き合えるようになりました。
-                        </p>
-                        <p class="testimonial-author">マキ・ウィーデン<br>アーティスト</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -291,37 +278,34 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=400&fit=crop&q=80" alt="心と体のライフ・インテグレーション（統合）サポート" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>心と体のライフ・インテグレーション（統合）サポート</h3>
+                        <p>
+                            潜在意識の奥にある『本当の想い』に気づき、ヒーリングのアプローチも取り入れながら、バラバラになっていた心と体をゆっくりとひとつに戻していく旅。
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&q=80" alt="ヘルスコーチング" class="service-image">
                     </div>
                     <div class="service-content">
                         <h3>ヘルスコーチング</h3>
                         <p>
-                            食事・運動・睡眠など、日々の習慣を<br>
-                            無理なく整えていくサポート。
+                            食事・運動・睡眠など、日々の習慣を無理なく整え、10年先も心地よく過ごすための『予防』習慣をつくる伴走サポート。
                         </p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80" alt="潜在意識コーチング" class="service-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&q=80" alt="デトックス・リセット" class="service-image">
                     </div>
                     <div class="service-content">
-                        <h3>潜在意識コーチング</h3>
+                        <h3>デトックス・リセット</h3>
                         <p>
-                            心の奥にある本当の想いや、<br>
-                            気づいていなかった思い込みに向き合う時間。
-                        </p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=400&fit=crop&q=80" alt="心・体・魂の統合サポート" class="service-image">
-                    </div>
-                    <div class="service-content">
-                        <h3>心・体・魂の統合サポート</h3>
-                        <p>
-                            バラバラになっていた感覚を、<br>
-                            ゆっくりとひとつに戻していく旅。
+                            がんばり続けてきた体へ、感謝と手放しを。不調のサインが出る前に、これまでの『蓄積』をリセットし、本来の軽やかさを取り戻すための時間。
                         </p>
                     </div>
                 </div>
@@ -330,6 +314,23 @@
                 ※ どれを選ぶか悩まなくて大丈夫です。<br>
                 まずは、お話を聞かせてください。
             </p>
+        </div>
+    </section>
+
+    <!-- 5.5. ブリッジセクション（核心メッセージ） -->
+    <section class="bridge">
+        <div class="container">
+            <div class="bridge-content">
+                <p class="bridge-quote">
+                    今の体は、過去10年の選択からできている。<br>
+                    だからこそ、今ここからの選択が、未来のあなたを変えていく。
+                </p>
+                <p class="bridge-text">
+                    病気という名前がつくまでには、長い月日の積み重ねがあります。<br>
+                    症状が出てからではなく、その手前で気づいてあげること。<br>
+                    忙しさの中で後回しにしてきた『体の声』に、今こそ耳を傾けてみませんか？
+                </p>
+            </div>
         </div>
     </section>
 
@@ -342,57 +343,63 @@
                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&h=900&fit=crop&q=80" alt="オンラインプログラム" class="courses-hero-image">
             </div>
 
-            <h2 class="section-title">選べる道筋 — 可能性への扉</h2>
+            <h2 class="section-title">選べる道筋 ― あなたに合う形を一緒に</h2>
             <p class="courses-intro">
                 まずはお話をうかがい、いまの状態に合う形を一緒に選びます。<br>
-                下は継続サポートの一例です。
+                以下は、継続サポートの一例です。
             </p>
 
             <div class="courses-grid">
                 <!-- コース1 -->
-                <div class="course-card">
+                <a href="#cta" class="course-card">
                     <div class="course-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&h=400&fit=crop&q=80" alt="潜在意識の再プログラミング＋細胞レベルの健康" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&h=400&fit=crop&q=80" alt="心と体の深層ケア・コース" class="course-image">
                     </div>
                     <div class="course-content">
-                        <h3>潜在意識の再プログラミング＋<br>細胞レベルの健康</h3>
-                        <p class="course-duration">6か月プログラム（12回のセッション）</p>
+                        <h3>心と体の深層ケア・コース</h3>
+                        <div class="course-tags">
+                            <span class="course-tag">期間：6ヶ月</span>
+                            <span class="course-tag">オンライン</span>
+                        </div>
                         <p class="course-description">
-                            心の奥にある思い込みをゆっくりと整えながら、<br>
-                            体の細胞レベルから健やかさを取り戻していく旅。
+                            心の奥にある思い込みをゆっくりとほどきながら、体の細胞レベルから健やかさを取り戻していく、一番人気のトータルケア。
                         </p>
                     </div>
-                </div>
+                </a>
 
                 <!-- コース2 -->
-                <div class="course-card">
+                <a href="#cta" class="course-card">
                     <div class="course-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop&q=80" alt="腸の健康とウェルネス" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop&q=80" alt="腸と心のリズム・コース" class="course-image">
                     </div>
                     <div class="course-content">
-                        <h3>腸の健康とウェルネス</h3>
-                        <p class="course-duration">6か月プログラム（12回のセッション）</p>
+                        <h3>腸と心のリズム・コース</h3>
+                        <div class="course-tags">
+                            <span class="course-tag">期間：6ヶ月</span>
+                            <span class="course-tag">オンライン</span>
+                        </div>
                         <p class="course-description">
-                            第二の脳と言われる腸を整えることで、<br>
-                            心と体の両方に静かな変化をもたらします。
+                            第二の脳と言われる「腸」を整えることで、心と体の両方に静かな変化と安定をもたらします。
                         </p>
                     </div>
-                </div>
+                </a>
 
                 <!-- コース3 -->
-                <div class="course-card">
+                <a href="#cta" class="course-card">
                     <div class="course-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&q=80" alt="究極のデトックスプログラム" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80" alt="大人のデトックス・プログラム" class="course-image">
                     </div>
                     <div class="course-content">
-                        <h3>究極のデトックスプログラム</h3>
-                        <p class="course-duration">3か月プログラム（6回のセッション）</p>
+                        <h3>大人のデトックス・プログラム</h3>
+                        <div class="course-tags">
+                            <span class="course-tag">期間：3ヶ月</span>
+                            <span class="course-tag">集中ケア</span>
+                        </div>
                         <p class="course-description">
-                            体に溜まったものを手放し、<br>
-                            軽やかさを思い出すためのサポート。
+                            体に溜まったものを手放し、本来の免疫力と軽やかさを思い出していくための集中リセット期間。
                         </p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="courses-cta">
@@ -407,28 +414,33 @@
     <section class="story" id="story">
         <div class="container">
             <h2 class="section-title">なぜ、この活動をしているのか</h2>
-            <div class="story-content">
-                <p>
-                    私は、大切な人を病気で失いました。
-                </p>
-                <p>
-                    もっと早く気づけていたら。<br>
-                    もっと違う選択ができたかもしれない。<br>
-                    そんな後悔が、ずっと心に残っています。
-                </p>
-                <p>
-                    だからこそ、<br>
-                    今を生きる人たちに<br>
-                    後悔しない生き方を届けたい。
-                </p>
-                <p>
-                    心と体の声に気づき、<br>
-                    自分を大切にする選択ができる。<br>
-                    そんなお手伝いをしたいと思っています。
-                </p>
-                <p class="story-closing">
-                    それが、私がこのお仕事を続けている理由です。
-                </p>
+            <div class="story-wrapper">
+                <div class="story-image">
+                    <img src="assets/img/story-mari.jpg" alt="ふがて まり">
+                </div>
+                <div class="story-content">
+                    <p>
+                        私は、大切な人を病気で失いました。
+                    </p>
+                    <p>
+                        もっと早く気づけていたら。<br>
+                        もっと違う選択ができたかもしれない。<br>
+                        そんな後悔が、ずっと心に残っています。
+                    </p>
+                    <p>
+                        だからこそ、<br>
+                        今を生きる人たちに<br>
+                        後悔しない生き方を届けたい。
+                    </p>
+                    <p>
+                        心と体の声に気づき、<br>
+                        自分を大切にする選択ができる。<br>
+                        そんなお手伝いをしたいと思っています。
+                    </p>
+                    <p class="story-closing">
+                        それが、私がこのお仕事を続けている理由です。
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -442,9 +454,16 @@
                 今の気持ちを、そのまま話してみませんか。
             </p>
             <div class="cta-buttons">
-                <a href="https://lin.ee/uJVPpu7" class="btn btn-primary">LINEで相談する</a>
-                <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+                <a href="https://lin.ee/uJVPpu7" class="btn btn-primary btn-line">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" fill="currentColor"/>
+                    </svg>
+                    LINEで相談する
+                </a>
             </div>
+            <p class="cta-alternative">
+                または、<a href="mailto:marifugate32@gmail.com" class="cta-email-link">メールでのお問い合わせはこちら</a>
+            </p>
             <p class="cta-note">
                 お気軽にお声がけください。
             </p>
@@ -460,14 +479,17 @@
             <p class="footer-name">Healing One Heart Wellness</p>
             <p class="footer-tagline">Love & Gratitude</p>
 
-            <!-- つながる -->
-            <div class="footer-connect">
-                <a href="https://lin.ee/uJVPpu7" class="footer-line-btn">LINEで相談する</a>
-                <a href="https://www.instagram.com/mari_fugate_healthcoach/" target="_blank" rel="noopener noreferrer" class="footer-instagram-link">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="footer-instagram-icon">
+            <!-- SNSリンク（控えめ） -->
+            <div class="footer-social">
+                <a href="https://www.instagram.com/mari_fugate_healthcoach/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="footer-social-icon">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
                     </svg>
-                    Instagram
+                </a>
+                <a href="https://www.facebook.com/mari.weeden" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="footer-social-icon">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
+                    </svg>
                 </a>
             </div>
 
