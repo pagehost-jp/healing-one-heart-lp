@@ -773,9 +773,9 @@ section {
 }
 
 /* ========== 4.5. ご一緒した方の声（Testimonials） ========== */
-/* 控えめで自然な見せ方 */
+/* 静かな信頼感を表現するデザイン */
 .testimonials {
-    background-color: var(--color-bg-secondary);
+    background-color: #fafafa;
     padding: 120px 0;
 }
 
@@ -791,7 +791,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -799,14 +799,25 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     text-align: center;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 円形アバター（仮画像） */
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* 円形アバター */
 .testimonial-avatar {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 8px;
 }
 
 .avatar-image {
@@ -815,36 +826,39 @@ section {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    opacity: 0.9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .testimonial-content {
     flex: 1;
+    width: 100%;
 }
 
 .testimonial-title {
-    font-size: 1em;
-    font-weight: 500;
-    color: var(--color-accent);
-    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #d4a5a5;
+    margin-bottom: 24px;
     letter-spacing: 0.05em;
     font-family: var(--font-serif);
 }
 
 .testimonial-text {
-    font-size: 0.9em;
+    font-size: 0.95em;
     line-height: 1.9;
-    color: var(--color-text-light);
-    margin-bottom: 15px;
+    color: var(--color-text-main);
+    margin-bottom: 16px;
     font-style: normal;
 }
 
 .testimonial-author {
-    font-size: 0.75em;
-    color: #aaa;
+    font-size: 0.8em;
+    color: #999;
     letter-spacing: 0.05em;
     line-height: 1.6;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
 }
 
 /* ========== 5. 提供内容 ========== */
@@ -1614,16 +1628,26 @@ section {
 
     .testimonials-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        padding: 40px 30px;
+        border-radius: 16px;
     }
 
     .testimonial-avatar {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .testimonial-text {
-        font-size: 0.85em;
+        font-size: 0.9em;
+        line-height: 1.8;
+    }
+
+    .testimonial-title {
+        font-size: 1.05em;
     }
 
     .services-grid {
