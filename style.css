@@ -1403,8 +1403,52 @@ section {
     color: #bbb;
 }
 
+/* ========== 改行制御 ========== */
+/* PC表示では sp-br を非表示 */
+.sp-br {
+    display: none;
+}
+
+/* SP表示では pc-br を非表示 */
+.pc-br {
+    display: inline;
+}
+
+/* PC表示では pc-inline を表示 */
+.pc-inline {
+    display: inline;
+}
+
+/* セクションサブタイトル（小さめ） - PC表示では通常サイズ */
+.section-subtitle-sm {
+    display: inline;
+}
+
 /* ========== レスポンシブ対応 ========== */
 @media (max-width: 768px) {
+    /* SP表示では sp-br を表示、pc-br を非表示 */
+    .sp-br {
+        display: inline;
+    }
+
+    .pc-br {
+        display: none;
+    }
+
+    /* SP表示では pc-inline を非表示 */
+    .pc-inline {
+        display: none;
+    }
+
+    /* SP表示ではセクションサブタイトルを小さめに */
+    .section-subtitle-sm {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 400;
+        margin-top: 0.5em;
+        opacity: 0.9;
+    }
+
     body {
         font-size: 15px;
     }
@@ -1692,7 +1736,7 @@ section {
     }
 
     .cta-title {
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
 
     .cta-description {
