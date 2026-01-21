@@ -1449,6 +1449,16 @@ section {
         opacity: 0.9;
     }
 
+    /* SP表示でbridge-text-lineに行間を追加 */
+    .bridge-text-line {
+        display: block;
+        margin-bottom: 1.2em;
+    }
+
+    .bridge-text-line:last-child {
+        margin-bottom: 0;
+    }
+
     body {
         font-size: 15px;
     }
