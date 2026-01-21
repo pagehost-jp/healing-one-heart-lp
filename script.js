@@ -132,4 +132,34 @@ document.addEventListener('DOMContentLoaded', () => {
     philosophyItems.forEach(item => {
         philosophyObserver.observe(item);
     });
+
+    // SP表示のみ：bridge-quote-lineを1行ずつ右からスライドイン
+    const bridgeQuoteLines = document.querySelectorAll('.bridge-quote-line');
+
+    if (bridgeQuoteLines.length > 0 && window.innerWidth <= 768) {
+        const bridgeObserverOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const bridgeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('is-visible')) {
+                    // 各行のインデックスを取得
+                    const index = Array.from(bridgeQuoteLines).indexOf(entry.target);
+                    // 0.4秒ずつ遅延して表示
+                    setTimeout(() => {
+                        entry.target.classList.add('is-visible');
+                    }, index * 400);
+                    // 一度表示したら監視を解除
+                    bridgeObserver.unobserve(entry.target);
+                }
+            });
+        }, bridgeObserverOptions);
+
+        bridgeQuoteLines.forEach(line => {
+            bridgeObserver.observe(line);
+        });
+    }
 });

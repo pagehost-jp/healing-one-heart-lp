@@ -1459,6 +1459,30 @@ section {
         margin-bottom: 0;
     }
 
+    /* SP表示でbridge-quoteを左揃え */
+    .bridge-quote {
+        text-align: left;
+    }
+
+    /* 各行を初期状態で非表示 */
+    .bridge-quote-line {
+        display: block;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    /* スクロールで画面に入ったときのアニメーション */
+    .bridge-quote-line.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* SP表示でbridge-textも左揃え */
+    .bridge-text {
+        text-align: left;
+    }
+
     body {
         font-size: 15px;
     }
