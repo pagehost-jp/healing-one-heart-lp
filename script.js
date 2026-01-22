@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SP表示のみ：bridge-quote-lineを1行ずつ右からスライドイン
     const bridgeQuoteLines = document.querySelectorAll('.bridge-quote-line');
 
-    if (bridgeQuoteLines.length > 0 && window.innerWidth <= 768) {
+    if (bridgeQuoteLines.length > 0) {
         const bridgeObserverOptions = {
             root: null,
             rootMargin: '0px',
@@ -146,12 +146,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const bridgeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.classList.contains('is-visible')) {
-                    // 各行のインデックスを取得
-                    const index = Array.from(bridgeQuoteLines).indexOf(entry.target);
-                    // 0.4秒ずつ遅延して表示
-                    setTimeout(() => {
+                    // SP表示の場合のみアニメーション、PC表示は即座に表示
+                    if (window.innerWidth <= 768) {
+                        // 各行のインデックスを取得
+                        const index = Array.from(bridgeQuoteLines).indexOf(entry.target);
+                        // 0.4秒ずつ遅延して表示
+                        setTimeout(() => {
+                            entry.target.classList.add('is-visible');
+                        }, index * 400);
+                    } else {
+                        // PC表示では即座に表示
                         entry.target.classList.add('is-visible');
-                    }, index * 400);
+                    }
                     // 一度表示したら監視を解除
                     bridgeObserver.unobserve(entry.target);
                 }
