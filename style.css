@@ -789,9 +789,9 @@ section {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1425,6 +1425,15 @@ section {
 }
 
 /* ========== レスポンシブ対応 ========== */
+/* タブレット表示（769px〜1024px）: 受講生の声を2カラムに */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 900px;
+    }
+}
+
 @media (max-width: 768px) {
     /* SP表示では sp-br を表示、pc-br を非表示 */
     .sp-br {
