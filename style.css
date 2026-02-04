@@ -416,8 +416,8 @@ section {
 }
 
 .avatar {
-    width: 180px;
-    height: 180px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
@@ -430,6 +430,8 @@ section {
     object-fit: cover;
     object-position: 50% 35%;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
 }
 
 /* 紹介文 */
@@ -1743,8 +1745,8 @@ section {
     }
 
     .avatar {
-        width: 150px;
-        height: 150px;
+        width: 220px;
+        height: 220px;
     }
 
     .about-intro p {
