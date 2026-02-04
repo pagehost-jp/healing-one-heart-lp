@@ -1,17 +1,28 @@
-/* ========== CSS変数（デザイントークン） ========== */
+/* ========== CSS変数（デザイントークン）- 陽だまりのサンクチュアリ ========== */
 :root {
     /* フォント */
     --font-serif: "Noto Serif JP", serif;
     --font-sans: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
 
-    /* 色 */
-    --color-text: #333333;
-    --color-text-light: #666666;
-    --color-accent: #d4869c;
-    --color-accent-gold: #c9a961;
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #fffafa;
-    --color-bg-light: #fafafa;
+    /* 色 - 光と清潔感 */
+    --bg-pure-white: #FFFFFF;
+    --bg-light-glow: linear-gradient(135deg, #FFFAFA 0%, #FFFFFF 100%);
+    --bg-soft-light: #FFFAFA;
+
+    /* アクセント - マットなゴールドと大人ピンク */
+    --accent-champagne: #C5A059;
+    --accent-soft-pink: #F2DADA;
+    --accent-gold-light: #D4B77A;
+
+    /* テキスト - 優しいグレー */
+    --text-charcoal: #4A4A4A;
+    --text-light-gray: #7A7A7A;
+    --text-soft-gray: #999999;
+
+    /* 光の影 - ゴールドの輝き */
+    --shadow-gold-glow: 0 10px 40px rgba(197, 160, 89, 0.15);
+    --shadow-soft-glow: 0 5px 20px rgba(197, 160, 89, 0.1);
+    --shadow-card: 0 8px 30px rgba(197, 160, 89, 0.12);
 
     /* サイズ */
     --content-width: 720px;
@@ -35,8 +46,8 @@
 body {
     font-family: var(--font-sans);
     line-height: var(--line-height-body);
-    color: var(--color-text);
-    background-color: var(--color-bg-primary);
+    color: var(--text-charcoal);
+    background: var(--bg-pure-white);
     font-size: 16px;
     letter-spacing: var(--letter-spacing);
 }
@@ -57,7 +68,7 @@ h1, h2, h3 {
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 15px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-soft-glow);
 }
 
 .header-container {
@@ -99,7 +110,7 @@ h1, h2, h3 {
 }
 
 .nav-link:hover {
-    color: #d4869c;
+    color: var(--accent-champagne);
 }
 
 .logo-image {
@@ -128,7 +139,7 @@ h1, h2, h3 {
 }
 
 .header-line-btn {
-    background-color: var(--color-accent);
+    background: var(--accent-champagne);
     color: #fff;
     padding: 10px 20px;
     border-radius: 24px;
@@ -141,9 +152,9 @@ h1, h2, h3 {
 }
 
 .header-line-btn:hover {
-    background-color: #c17586;
+    background: var(--accent-gold-light);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(212, 134, 156, 0.3);
+    box-shadow: var(--shadow-gold-glow);
 }
 
 /* ヘッダーソーシャルリンク */
@@ -194,14 +205,14 @@ section {
     font-weight: 400;
     text-align: center;
     margin-bottom: 60px;
-    color: var(--color-text);
+    color: var(--text-charcoal);
     line-height: var(--line-height-heading);
     letter-spacing: 0.05em;
     position: relative;
     padding-top: 20px;
 }
 
-/* ゴールドの短い線（上に配置） */
+/* シャンパンゴールドの輝く線（上に配置） */
 .section-title::before {
     content: '';
     position: absolute;
@@ -210,8 +221,9 @@ section {
     transform: translateX(-50%);
     width: 30px;
     height: 1px;
-    background: var(--color-accent-gold);
+    background: var(--accent-champagne);
     border-radius: 1px;
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
 }
 
 /* ========== 1. ファーストビュー ========== */
@@ -310,7 +322,7 @@ section {
 
 /* ========== 2. 共感セクション ========== */
 .empathy {
-    background-color: #ffffff;
+    background: var(--bg-light-glow);
 }
 
 .empathy-text {
@@ -352,7 +364,7 @@ section {
 /* ========== 2. プロフィール抜粋（About preview） ========== */
 /* プロ仕様：安心→共感→信頼の順番で情報を提示 */
 .about {
-    background-color: var(--color-bg-primary);
+    background: var(--bg-pure-white);
     padding: 120px 0;
 }
 
@@ -409,7 +421,7 @@ section {
     margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-gold-glow);
 }
 
 .avatar img {
@@ -547,15 +559,15 @@ section {
     letter-spacing: 0.05em;
     transition: all 0.3s ease;
     background-color: transparent;
-    color: var(--color-accent);
-    border: 1.5px solid var(--color-accent);
+    color: var(--accent-champagne);
+    border: 1.5px solid var(--accent-champagne);
     cursor: pointer;
 }
 
 .btn-outline:hover {
-    background-color: #fff5f8;
+    background: var(--bg-soft-light);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(212, 134, 156, 0.15);
+    box-shadow: var(--shadow-soft-glow);
 }
 
 .btn-outline .arrow {
@@ -679,7 +691,7 @@ section {
 /* iOS対応：擬似要素で背景固定を実装 */
 .philosophy {
     position: relative;
-    background-color: #fafafa;
+    background: var(--bg-soft-light);
     overflow: hidden;
     min-height: 600px;
 }
@@ -775,7 +787,7 @@ section {
 /* ========== 4.5. ご一緒した方の声（Testimonials） ========== */
 /* 静かな信頼感を表現するデザイン */
 .testimonials {
-    background-color: #fafafa;
+    background: var(--bg-soft-light);
     padding: 120px 0;
 }
 
@@ -801,16 +813,16 @@ section {
     align-items: center;
     gap: 24px;
     text-align: center;
-    background-color: #ffffff;
+    background: var(--bg-pure-white);
     padding: 50px 40px;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-soft-glow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-gold-glow);
 }
 
 /* 円形アバター */
@@ -818,6 +830,7 @@ section {
     width: 70px;
     height: 70px;
     margin-bottom: 8px;
+    border-radius: 50%;
 }
 
 .avatar-image {
@@ -826,7 +839,8 @@ section {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-soft-glow);
+    border: 2px solid var(--accent-soft-pink);
 }
 
 .testimonial-content {
@@ -897,12 +911,14 @@ section {
     position: relative;
     overflow: hidden;
     background-color: #f5f5f5;
+    border-radius: 8px 8px 0 0;
 }
 
 .service-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(1.05);
 }
 
 .service-content {
@@ -919,6 +935,15 @@ section {
     font-weight: 400;
     color: #333;
     letter-spacing: 0.05em;
+}
+
+.service-subtitle {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: #888;
+    margin-top: 8px;
+    letter-spacing: 0.03em;
 }
 
 .service-duration {
@@ -945,7 +970,7 @@ section {
 
 /* ========== 5.5. ブリッジセクション（核心メッセージ） ========== */
 .bridge {
-    background-color: #ffffff;
+    background: var(--bg-pure-white);
     padding: 120px 0;
 }
 
@@ -991,7 +1016,8 @@ section {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-card);
+    filter: brightness(1.05);
 }
 
 .courses-hero-placeholder {
@@ -1033,10 +1059,10 @@ section {
 }
 
 .course-card {
-    background-color: #fff;
+    background: var(--bg-pure-white);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-soft-glow);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -1046,12 +1072,12 @@ section {
 }
 
 .course-card:hover {
-    box-shadow: 0 8px 24px rgba(212, 134, 156, 0.15);
+    box-shadow: var(--shadow-gold-glow);
     transform: translateY(-6px);
 }
 
 .course-card:hover h3 {
-    color: var(--color-accent);
+    color: var(--accent-champagne);
 }
 
 .course-image-wrapper {
@@ -1060,12 +1086,14 @@ section {
     position: relative;
     overflow: hidden;
     background-color: #f5f5f5;
+    border-radius: 8px 8px 0 0;
 }
 
 .course-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(1.05);
 }
 
 .course-image-placeholder {
@@ -1158,12 +1186,122 @@ section {
     margin-bottom: 30px;
 }
 
+/* ========== 6.5. よくある質問セクション ========== */
+.faq {
+    background: var(--bg-soft-light);
+    padding: 80px 0;
+}
+
+.faq-subtitle {
+    text-align: center;
+    font-size: 0.95em;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-pure-white);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-soft-glow);
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-card);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.faq-question:focus {
+    outline: none;
+}
+
+.faq-category-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    color: var(--accent-champagne);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.faq-question:hover .faq-category-icon {
+    opacity: 1;
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-question[aria-expanded="true"] {
+    background-color: #f5f5f5;
+    border-left: 3px solid var(--accent-champagne);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.15);
+}
+
+.faq-question-text {
+    flex: 1;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: var(--text-charcoal);
+    line-height: 1.6;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: var(--accent-champagne);
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 28px 24px 28px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.faq-answer[hidden] {
+    display: none;
+}
+
+.faq-answer p {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+    padding-top: 16px;
+}
+
 /* ========== 7. ストーリーセクション ========== */
 /* 文字が主役、写真は「余白と呼吸」をつくる背景 */
 /* 抽象・自然系：海・空・水平線 - 語らない強さ */
 .story {
     position: relative;
-    background-color: #ffffff;
+    background: var(--bg-pure-white);
     background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1600&q=80&blur=20');
     background-size: cover;
     background-position: center center;
@@ -1233,7 +1371,7 @@ section {
 
 /* ========== 6. CTA（行動導線） ========== */
 .cta {
-    background: linear-gradient(180deg, #fff5f8 0%, #ffffff 100%);
+    background: linear-gradient(180deg, var(--bg-soft-light) 0%, var(--bg-pure-white) 100%);
     text-align: center;
 }
 
@@ -1276,15 +1414,15 @@ section {
 }
 
 .btn-primary {
-    background-color: #d4869c;
+    background: var(--accent-champagne);
     color: #ffffff;
-    border-color: #d4869c;
+    border-color: var(--accent-champagne);
 }
 
 .btn-line {
     padding: 20px 60px;
     font-size: 1.1em;
-    box-shadow: 0 4px 15px rgba(212, 134, 156, 0.2);
+    box-shadow: var(--shadow-gold-glow);
 }
 
 .btn-icon {
@@ -1294,22 +1432,22 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: #c27589;
-    border-color: #c27589;
+    background: var(--accent-gold-light);
+    border-color: var(--accent-gold-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(212, 134, 156, 0.35);
+    box-shadow: 0 12px 30px rgba(197, 160, 89, 0.4);
 }
 
 .btn-secondary {
-    background-color: #ffffff;
-    color: #d4869c;
-    border-color: #d4869c;
+    background: var(--bg-pure-white);
+    color: var(--accent-champagne);
+    border-color: var(--accent-champagne);
 }
 
 .btn-secondary:hover {
-    background-color: #fff5f8;
+    background: var(--bg-soft-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(212, 134, 156, 0.15);
+    box-shadow: var(--shadow-gold-glow);
 }
 
 .cta-alternative {
@@ -1804,6 +1942,37 @@ section {
 
     .cta-alternative {
         font-size: 0.85em;
+    }
+
+    /* FAQ responsive */
+    .faq {
+        padding: 60px 0;
+    }
+
+    .faq-subtitle {
+        margin-bottom: 30px;
+    }
+
+    .faq-question {
+        padding: 20px 20px;
+        gap: 12px;
+    }
+
+    .faq-category-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .faq-question-text {
+        font-size: 1em;
+    }
+
+    .faq-answer {
+        padding: 0 20px 20px 20px;
+    }
+
+    .faq-answer p {
+        font-size: 0.9em;
     }
 
     .footer {

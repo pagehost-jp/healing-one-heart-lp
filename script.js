@@ -168,4 +168,33 @@ document.addEventListener('DOMContentLoaded', () => {
             bridgeObserver.observe(line);
         });
     }
+
+    // FAQ アコーディオン機能
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
+            // すべての他のFAQを閉じる（オプション：複数開いても良い場合はこのブロックを削除）
+            faqQuestions.forEach(otherQuestion => {
+                if (otherQuestion !== question && otherQuestion.getAttribute('aria-expanded') === 'true') {
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    const otherAnswer = otherQuestion.parentElement.querySelector('.faq-answer');
+                    otherAnswer.hidden = true;
+                }
+            });
+
+            // クリックされたFAQの開閉
+            if (isExpanded) {
+                question.setAttribute('aria-expanded', 'false');
+                answer.hidden = true;
+            } else {
+                question.setAttribute('aria-expanded', 'true');
+                answer.hidden = false;
+            }
+        });
+    });
 });
