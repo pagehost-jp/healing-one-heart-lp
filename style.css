@@ -1287,7 +1287,7 @@ section {
 
 .faq-question-text {
     flex: 1;
-    font-size: 1.05em;
+    font-size: 1.35em;
     font-weight: 500;
     color: var(--text-charcoal);
     line-height: 1.6;
@@ -1521,7 +1521,7 @@ section {
 }
 
 .footer-name {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 400;
     color: #333;
     margin-bottom: 10px;
@@ -1530,7 +1530,7 @@ section {
 }
 
 .footer-tagline {
-    font-size: 0.85em;
+    font-size: 1.0em;
     color: #999;
     margin-bottom: 30px;
     letter-spacing: 0.08em;
@@ -1992,7 +1992,7 @@ section {
     }
 
     .faq-question-text {
-        font-size: 1em;
+        font-size: 0.95em;
     }
 
     .faq-answer {
