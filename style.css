@@ -48,12 +48,14 @@ body {
     line-height: var(--line-height-body);
     color: var(--text-charcoal);
     background: var(--bg-pure-white);
-    font-size: 16px;
+    font-size: 17.6px;
     letter-spacing: var(--letter-spacing);
 }
 
 /* 見出しは明朝体 */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-serif);
     line-height: var(--line-height-heading);
 }
@@ -194,6 +196,14 @@ h1, h2, h3 {
     padding: 0 30px;
 }
 
+/* デスクトップは固定幅 */
+@media (min-width: 768px) {
+    .container {
+        width: 1200px;
+        max-width: none;
+    }
+}
+
 /* ========== セクション共通 ========== */
 section {
     padding: 120px 0;
@@ -250,7 +260,7 @@ section {
     background-size: cover;
     background-position: center center;
     z-index: 0;
-    animation: heroZoom 20s ease-in-out infinite alternate;
+    animation: heroZoom 15s ease-in-out infinite alternate;
 }
 
 /* ゆっくりとしたズームアニメーション */
@@ -258,6 +268,7 @@ section {
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.1);
     }
@@ -314,6 +325,7 @@ section {
         opacity: 0;
         transform: translateY(15px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -432,6 +444,8 @@ section {
     display: block;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: high-quality;
+    transform: scale(1.0);
+    transform-origin: center 40%;
 }
 
 /* 紹介文 */
@@ -784,6 +798,7 @@ section {
     color: #666;
     line-height: 2;
     font-size: 0.95em;
+    text-align: left;
 }
 
 /* ========== 4.5. ご一緒した方の声（Testimonials） ========== */
@@ -865,6 +880,7 @@ section {
     color: var(--color-text-main);
     margin-bottom: 16px;
     font-style: normal;
+    text-align: left;
 }
 
 .testimonial-author {
@@ -872,9 +888,13 @@ section {
     color: #999;
     letter-spacing: 0.05em;
     line-height: 1.6;
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    min-height: 2.6em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 /* ========== 5. 提供内容 ========== */
@@ -1127,8 +1147,9 @@ section {
     color: #333;
     line-height: 1.5;
     letter-spacing: 0.05em;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     transition: color 0.3s ease;
+    min-height: 3.5em;
 }
 
 .course-tags {
@@ -1136,6 +1157,8 @@ section {
     gap: 8px;
     flex-wrap: wrap;
     margin-bottom: 15px;
+    min-height: 4em;
+    align-items: flex-start;
 }
 
 .course-tag {
@@ -1174,6 +1197,7 @@ section {
     line-height: 1.9;
     margin: 0;
     flex: 1;
+    text-align: left;
 }
 
 /* コースCTA */
@@ -1327,7 +1351,7 @@ section {
 .story .container {
     position: relative;
     z-index: 1;
-    max-width: var(--content-width);
+    max-width: 888px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1362,6 +1386,7 @@ section {
     font-size: 1.05em;
     color: #333;
     line-height: 1.8;
+    letter-spacing: 0.08em;
 }
 
 .story-closing {
@@ -1488,8 +1513,8 @@ section {
 }
 
 .footer-logo-image {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     opacity: 0.85;
@@ -1575,6 +1600,7 @@ section {
 }
 
 @media (max-width: 768px) {
+
     /* SP表示では sp-br を表示、pc-br を非表示 */
     .sp-br {
         display: inline;
