@@ -683,7 +683,10 @@ section {
     color: #777;
     line-height: 1.6;
     text-align: center;
-    min-width: 180px;
+}
+
+.credential-text .nowrap {
+    white-space: nowrap;
 }
 
 .credential-badge {
