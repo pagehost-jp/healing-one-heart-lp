@@ -679,10 +679,11 @@ section {
 }
 
 .credential-text {
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: #777;
     line-height: 1.6;
     text-align: center;
+    min-width: 180px;
 }
 
 .credential-badge {
