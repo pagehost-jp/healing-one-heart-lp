@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
         philosophyObserver.observe(item);
     });
 
-    // SP表示のみ：bridge-quote-lineを1行ずつ右からスライドイン
-    const bridgeQuoteLines = document.querySelectorAll('.bridge-quote-line');
+    // SP表示のみ：bridge-quote-lineとbridge-text-lineを1行ずつ右からスライドイン
+    const bridgeQuoteLines = document.querySelectorAll('.bridge-quote-line, .bridge-text-line');
 
     if (bridgeQuoteLines.length > 0) {
         const bridgeObserverOptions = {

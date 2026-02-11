@@ -256,7 +256,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('assets/img/hero-background.png');
+    background-image: url('assets/img/hero-background.webp');
     background-size: cover;
     background-position: center center;
     z-index: 0;
@@ -1640,7 +1640,8 @@ section {
     }
 
     /* 各行を初期状態で非表示 */
-    .bridge-quote-line {
+    .bridge-quote-line,
+    .bridge-text-line {
         display: block;
         opacity: 0;
         transform: translateX(50px);
@@ -1648,7 +1649,8 @@ section {
     }
 
     /* スクロールで画面に入ったときのアニメーション */
-    .bridge-quote-line.is-visible {
+    .bridge-quote-line.is-visible,
+    .bridge-text-line.is-visible {
         opacity: 1;
         transform: translateX(0);
     }
@@ -1701,9 +1703,9 @@ section {
         padding: 100px 20px 40px;
     }
 
-    /* モバイルではアニメーションを軽量化 */
+    /* モバイルではアニメーションを軽量化 -> WebP化により有効化 */
     .hero-background {
-        animation: none;
+        /* animation: none; */
         background-position: center 30%;
     }
 
