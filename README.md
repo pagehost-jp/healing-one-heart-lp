@@ -95,6 +95,51 @@ healing-one-heart-lp/
 └── README.md       # このファイル
 ```
 
+## 開発履歴
+
+### 2026年2月
+
+**初期開発・デザイン実装**
+- LP構成・デザイン実装
+- プロフィール、サービス、ストーリーセクション追加
+- レスポンシブデザイン対応
+
+**証明書セクション改善**
+- JSA認定証を追加（3列グリッドレイアウトに変更）
+- 証明書画像のクリック拡大モーダル実装
+- 画像WebP変換による最適化
+- テキスト改行制御（nowrapスタイル適用）
+- 証明書と説明文の間隔最小化
+
+**GitHub公開**
+- GitHub Pages設定・公開完了
+- 公開URL: https://pagehost-jp.github.io/healing-one-heart-wellness/
+
+**SEO対策実装**
+- titleタグ最適化：「ふがてまり | ホリスティックヘルスコーチ | 心と体を整える腸活・心のブロック解除プログラム」
+- meta description最適化（主要キーワード含む）
+- 全画像のalt属性にSEOキーワード追加
+  - プロフィール写真：「ふがてまり プロフィール写真 - ホリスティックヘルスコーチ」
+  - プログラム画像：「心のブロック解除プログラム」「リバースエイジング・デトックスプログラム」等
+- Google Search Console認証タグ追加
+- meta keywordsに名前バリエーション追加
+  - ふがてまり、フガテマリ、ふがて まり、フガテ マリ、fugatemari
+  - 主要キーワード：ホリスティックヘルスコーチ、腸活、心のブロック解除、体質改善、50代女性
+
+**英語版サイト制作**
+- healing-one-heart-wellness-en リポジトリ作成
+- 全セクション英語翻訳完了
+- フォント変更：Noto Sans JP → Cormorant Garamond + Open Sans
+- SEO対策（英語版）実施
+  - titleタグ：「Mari Fugate | Holistic Health Coach | Gut Health & Mind-Body Wellness for Women Over 50」
+  - meta keywords: Mari Fugate, fugatemari, holistic health coach, gut health, mind-body wellness
+- UI改善：哲学セクションタイトルの改行調整
+- 公開URL: https://pagehost-jp.github.io/healing-one-heart-wellness-en/
+
+**リポジトリ名変更**
+- `healing-one-heart-lp` → `healing-one-heart-wellness`
+- ローカルremote URL更新完了
+
 ## ライセンス
 
-© 2025 Healing One Heart. All rights reserved.
+© 2025 Healing One Heart Wellness. All rights reserved.
